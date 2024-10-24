@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-pt-20">
+    <head>
+        <meta charset="UTF-8">
+<title>
+    Judson Hartley
+</title>
+
+    <meta name="description" content="FT8 mode description.">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/INF680web/css/tailwind.css?v=1729757081947">
+
+    </head>
+    <!-- Google tag (gtag.js) 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JZFNC9XSF"></script> 
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8JZFNC9XSF');
+</script> -->
+    <body class="" data-theme="synthwave">
+        <div>
+            <div class="bg-base-100 drawer">
+                <input id="drawer" type="checkbox" class="drawer-toggle">
+                <div class="drawer-content">
+                    
+
+  <div class="bg-base-100 text-base-content sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-70 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] shadow-sm">
+    <div class="navbar w-full">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-100 shadow rounded-box w-52"><li><a href="/INF680web/pages/history/" class="btn btn-ghost text-xl">History</a></li>
+              <li><a href="/INF680web/pages/about/" class="btn btn-ghost text-xl">About</a></li><li><a href="/INF680web/pages/digital/" class="btn btn-ghost text-xl">HAM Radio Modes</a></li>
+              <li><a href="/INF680web/pages/about/" class="btn btn-ghost text-xl">About</a></li><li><a href="/INF680web/pages/digitalContest/" class="btn btn-ghost text-xl">Digital Contesting</a></li>
+              <li><a href="/INF680web/pages/about/" class="btn btn-ghost text-xl">About</a></li><li><a href="/INF680web/pages/ft8/" class="btn btn-ghost text-xl">FT8 Protocol</a></li>
+              <li><a href="/INF680web/pages/about/" class="btn btn-ghost text-xl">About</a></li></ul>
+        </div>
+        <a href="/INF680web/" class="btn btn-ghost text-xl">Home</a>
+      </div>
+      <div class="navbar-center hidden md:flex">
+        <ul class="menu menu-horizontal px-1"><li><a href="/INF680web/pages/history/" class="btn btn-ghost text-xl">History</a></li><li><a href="/INF680web/pages/digital/" class="btn btn-ghost text-xl">HAM Radio Modes</a></li><li><a href="/INF680web/pages/digitalContest/" class="btn btn-ghost text-xl">Digital Contesting</a></li><li><a href="/INF680web/pages/ft8/" class="btn btn-ghost text-xl">FT8 Protocol</a></li></ul>
+      </div>
+      <div class="navbar-end hidden md:flex">
+        <a href="/INF680web/pages/about/" class="btn btn-ghost text-xl">About</a>
+      </div>
+    </div>
+  </div>
+
+                    <div class="prose prose-sm md:prose-base max-w-5xl px-6 pb-16 xl:pr-2 mx-auto min-h-[calc(100vh-116px)]">
+                        
+                            
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto relative prose prose-sm md:prose-base">
+    <div class="hidden md:block sticky top-16 h-fit tableOfContents" data-table-of-contents="">
+        <div class="overflow-auto h-[calc(100vh-128px)] mt-2 mb-2">
+            <h3>Table of Contents:</h3>
+            <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#ft8-transmission-distances">FT8 Transmission distances</a>
+            		</li>
+
+                    <li><a href="#ft8-design">FT8 Design</a>
+            		</li>
+
+                    <li><a href="#ft8-channel-capacity">FT8 Channel Capacity</a>
+            		</li>
+
+                    <li><a href="#ft8-operation">FT8 Operation</a>
+            		</li>
+
+                    <li><a href="#ft8-decoding">FT8 Decoding</a>
+            		</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="md:col-start-2 md:col-end-5 markdown">
+        <div class="prose prose-sm md:prose-base w-full max-w-fit flex-grow my-10">
+            <h1 id="ft8-protocol" tabindex="-1">FT8 Protocol</h1>
+<h2 id="ft8-transmission-distances" tabindex="-1">FT8 Transmission distances</h2>
+<p>One quick example before talking about how FT8 works, is MQ0AWS’s FT8 log, where on FT8 using a 22 Watt transmitter, he was able to have a successful QSO with a distance of 10699 miles from England to Tasmania Australia, coming to a 2.06 milli-Watt per mile power rate. The full log is at <a href="https://m0aws.co.uk/mq0aws/MQ0AWS_WSJT_log.html">https://m0aws.co.uk/mq0aws/MQ0AWS_WSJT_log.html</a>.</p>
+<h2 id="ft8-design" tabindex="-1">FT8 Design</h2>
+<p>FT8 mode transmissions are designed to be generated on a computer, then sent from the sound card to the microphone input of a ham radio set to a specific frequency depending on the band in use, and to have that sound transmitted in single sideband mode. As most ham radios limit SSB to 2500 Hz bandwidth from the center, FT8 was designed to use any frequency from 200 to 2500Hz (audio to be transmitted via SSB at the radio), and each transmission is only 50 Hz wide, meaning that for each FT8 transmission, your radio only transmits a 50Hz wide signal out of the 2500Hz wide default band.</p>
+<h2 id="ft8-channel-capacity" tabindex="-1">FT8 Channel Capacity</h2>
+<p>FT8 sends data in 15 second windows using the PC’s time to determine the start of a window. Since it is trivial to time sync modern computers using NTP servers, and with an allowed few seconds of start error, this works very well. In each 15 second window, 77 bits of user information are encoded into a 50 Hz wide signal, 5.13 bits per second per FT8 transmission. As each FT8 transmission only occupies 50 Hz of the approximately 2500 Hz bandwidth of a single frequencies SSB transmission, multiple stations transmit at the same time. Because the station operator picks where to place his 50 Hz wide signal by looking at a waterfall of the entire SSB bandwidth, it is possible to place many more than the 2500 Hz (bandwidth)/50 Hz (signal) = 50 FT8 signals in one SSB band would allow. For example <a href="https://wsjtx.groups.io/g/main/topic/theoretical_maximum_for_one/80004223">one FT8 user</a> reported being able to successfully decode 74 FT8 50 Hz wide transmissions while using 200 Hz to 3000 Hz SSB receive filter for 2800 Hz of bandwidth. That is 132% of the expected useable bandwidth.</p>
+<p>FT8 encodes the data into Gaussian Continuous-phase frequency shift keying (GFSK) using 8 symbols (tones). Groups of three consecutive message bits are mapped to the 8 symbols using a Grey code, and FT8 generates a 174 bit codeword for each 77 bits of user information, per transmission. Three seven symbol Costas arrays are added to the 174/3 = 58 channel symbols at the beginning, middle, and end of each transmitted waveform for phase shift detection and decoder synchronization, to make 79 transmitted symbols per transmission per 15 seconds. If we use the 74 decoded transmissions per window number from above, this gives a 74 messages * 79 symbols / 15 seconds = 389.73 symbols per second. Since each symbol is 3 bits, then 389.73 symbols/s * 3 bits/symbol = 1169.2 bits per second.</p>
+<p>Using the channel capacity formula to work out the S/N ratio:<br>
+C = 2W log_2(1+S/N)^(1/2)<br>
+S/N = 2 ^(C/W) – 1<br>
+S/N = 2^(1169.2/2800) - 1 =  0.336:1 S/N for this observed successful decoding of 74 messages.</p>
+<h2 id="ft8-operation" tabindex="-1">FT8 Operation</h2>
+<p>How does FT8 manage to operate in these extremely low S/N ratios? Per <a href="https://wsjt.sourceforge.io/FT4_FT8_QEX.pdf">the FT4 and FT8 protocols manual</a>, FT8 was designed to operate at S/N dB of -21 dB on HF and VHF frequencies. For comparison, the SSB voice channel it operates on usually needs a S/N dB of 5 dB to be able to hear what the other station is saying. It also allows, as shown above at least 50 if not more stations to operate concurrently in the same bandwidth that would be used by a single voice transmission.</p>
+<p>FT8 Achieves this by a few tricks. The first is that by limiting the structure of the available messages to those used for contesting, then various message size efficiencies in the number of needed bits to send a message can be taken. FT8 “source-encodes” the messages to 77 bits by having specific message formats to encode the information. It then uses 14 bit cyclic redundancy check (CRC) error detection added to the 77 message bits, followed by Forward Error Correction using a low density parity check <a href="https://en.wikipedia.org/wiki/Low-density_parity-check_code">LDPC</a> code using a (174, 91) code made specifically for FT8, generating a 174 bit codeword for each message. The error correction creates a 56% message overhead in error correction alone. In addition, due to the effects of multipath distortion and phase shift from atmospheric conditions, three seven symbol <a href="https://en.wikipedia.org/wiki/Costas_array">Costas arrays</a> are inserted before, in the middle and at the end of each message, for an additional 63 bits of overhead, bring the overhead rate to 68%.</p>
+<p>The FT8 symbols are modulated using 8 symbol <a href="https://en.wikipedia.org/wiki/Frequency-shift_keying#Gaussian_frequency-shift_keying">Gaussian continuous frequency shift keying</a> to eliminate any side lobes due to abrupt frequency shifts. This greatly improves how closely together individual FT8 transmissions can be, to the point that overlapping transmissions are still successfully decoded. The transmit duration is 12.64 seconds out of the 15 second window, with transmissions starting at 0, 15, 30, and 45 seconds of each minute.</p>
+<p><img src="../../assets/FT8bandwidth.png" alt="FT8 GFSK Bandwidth Example"></p>
+<h2 id="ft8-decoding" tabindex="-1">FT8 Decoding</h2>
+<p>The WSJT-X software for FT8 takes the entire SSB received audio of up to 3000 Hz from your receiver as an audio stream, and attempts to decode every signal it can find. The FT8 decoder uses expected information about signals in this window by comparing to what was received in the last window, and because of the standard QSO exchange format, i.e. if the last transmission was your signal report to the other station, then it’s expected that this next transmission will be their signal report back, and will use your call sign and the other station’s, which reduces the number of decoding choices for this message, giving approximately 3 dB of additional signal to noise ratio. All of the forward error correction overhead means that there are no partial or corrupted messages, and makes false decodes extremely rare. After each found signal is decoded, because of the known encoded structure, the FT8 decoder generates the correct transmitted waveform and then subtracts it from the received data for the window, then tries to find FT8 transmissions again, causing successful decoding of messages that were at the same frequency. Up to three passes are made in each section of data, recovering transmissions that would have been missed with any other protocol.</p>
+<p>All of the protocol information is either in the public domain or under the GNU GPLv3 license, per the <a href="https://wsjt.sourceforge.io/FT4_FT8_QEX.pdf">protocol’s published document</a> and at the <a href="https://wsjt.sourceforge.io/">WSJT software’s website</a>.</p>
+<p>The Ham Radio DX YouTube channel did an extended <a href="https://www.youtube.com/watch?v=dOXbvKNu0c4">video on WSJT-X and FT8</a> and is worth a watch if you are interested in what it can do.</p>
+
+        </div>
+    </div>
+</div>
+
+
+                        
+                    </div>
+                    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+    <small>Copyright &copy;Judson Hartley 2024 | All rights reserved</small>
+</footer>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
