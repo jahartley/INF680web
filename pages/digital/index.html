@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-pt-20">
+    <head>
+        <meta charset="UTF-8">
+<title>
+    Judson Hartley
+</title>
+
+    <meta name="description" content="An introduction to HAM radio Digital modes.">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/INF680web/css/tailwind.css?v=1729745159591">
+
+    </head>
+    <!-- Google tag (gtag.js) 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JZFNC9XSF"></script> 
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8JZFNC9XSF');
+</script> -->
+    <body class="" data-theme="synthwave">
+        <div>
+            <div class="bg-base-100 drawer">
+                <input id="drawer" type="checkbox" class="drawer-toggle">
+                <div class="drawer-content">
+                    
+
+  <div class="bg-base-100 text-base-content sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-70 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] shadow-sm">
+    <div class="navbar w-full">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-100 shadow rounded-box w-52"><li><a href="/INF680web/pages/history/" class="btn btn-ghost text-xl">History</a></li>
+              <li><a href="/INF680web/pages/about/" class="btn btn-ghost text-xl">About</a></li><li><a href="/INF680web/pages/digital/" class="btn btn-ghost text-xl">HAM Digital Modes</a></li>
+              <li><a href="/INF680web/pages/about/" class="btn btn-ghost text-xl">About</a></li><li><a href="/INF680web/pages/digitalContest/" class="btn btn-ghost text-xl">Digital Contesting</a></li>
+              <li><a href="/INF680web/pages/about/" class="btn btn-ghost text-xl">About</a></li></ul>
+        </div>
+        <a href="/INF680web/" class="btn btn-ghost text-xl">Home</a>
+      </div>
+      <div class="navbar-center hidden md:flex">
+        <ul class="menu menu-horizontal px-1"><li><a href="/INF680web/pages/history/" class="btn btn-ghost text-xl">History</a></li><li><a href="/INF680web/pages/digital/" class="btn btn-ghost text-xl">HAM Digital Modes</a></li><li><a href="/INF680web/pages/digitalContest/" class="btn btn-ghost text-xl">Digital Contesting</a></li></ul>
+      </div>
+      <div class="navbar-end hidden md:flex">
+        <a href="/INF680web/pages/about/" class="btn btn-ghost text-xl">About</a>
+      </div>
+    </div>
+  </div>
+
+                    <div class="prose prose-sm md:prose-base max-w-5xl px-6 pb-16 xl:pr-2 mx-auto min-h-[calc(100vh-116px)]">
+                        
+                            
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto relative prose prose-sm md:prose-base">
+    <div class="hidden md:block sticky top-16 h-fit tableOfContents" data-table-of-contents="">
+        <div class="overflow-auto h-[calc(100vh-128px)] mt-2 mb-2">
+            <h3>Table of Contents:</h3>
+            <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#am-modulation">AM Modulation</a>
+            		</li>
+
+                    <li><a href="#ssb-modulation">SSB Modulation</a>
+            		</li>
+
+                    <li><a href="#rtty">RTTY</a>
+            		</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="md:col-start-2 md:col-end-5 markdown">
+        <div class="prose prose-sm md:prose-base w-full max-w-fit flex-grow my-10">
+            <h1 id="ham-radio-modes" tabindex="-1">HAM Radio modes</h1>
+<h2 id="am-modulation" tabindex="-1">AM Modulation</h2>
+<p>Early Radio used amplitude modulation, where a steady, single frequency sine wave is transmitted, and an analog signal (at a much lower frequency or range of frequencies i.e. audio from 300 to 3000Hz) is used to change the amplitude of the carrier. When this signal is viewed in the frequency domain, this modulation appears as side bands above and below the carrier frequency, extending to the highest frequency of the encoded audio. This results in a required bandwidth of two times the maximum modulated frequency. To increase the number of available channels for broadcast AM stations, the input audio was limited to 4000 Hz max, so the AM broadcast would be limited to an 8000 Hz bandwidth. An excellent video giving a great visual representation of AM modulation can be watched <a href="https://www.youtube.com/watch?v=I46eP8uZh_Y">here on YouTube</a>.</p>
+<h2 id="ssb-modulation" tabindex="-1">SSB Modulation</h2>
+<p>In a mono audio AM transmission, a large amount of power is used to transmit the carrier wave, and the audio information is mirrored across the carrier, making one of the side bands unnecessary, and a waste of transmitter power. In 1915 John Renshaw Carson filed a patent for Single Side Band modulation, which transmitted only the sideband, still offset from the now missing carrier frequency by the lowest audio frequency modulated. It was found that by limiting the input audio range to 300Hz to 3000Hz that voice only transmissions still sound correct, while reducing the bandwidth needed to send the audio to 4000 Hz vs the 8000 Hz needed for AM. Additionally the power needed to transmit only the side band is vastly reduced from what is needed for AM. Single Side Band became increasingly used for voice communication over radio frequencies after World War II, and is very commonly used by HAM radio operators. <a href="https://www.arrl.org/files/file/Technology/pdf/McElroy.pdf">Amateur Radio and the Rise of SSB</a></p>
+<h2 id="rtty" tabindex="-1">RTTY</h2>
+<p>By the end of World War II, the teletype machine had been in common use for landline communication, by using a 5 bit code encoded as a serial binary code using five bits, with a stop and start bit, to either conduct current or stop the current by opening the circuit with a 1 bit encoded as current flow, and a zero as no current. These teletype machines looked like a type write but typed letters were encoded and sent over the landline wire, where another teletype on the other end would print the characters onto paper. Examples can be seen on this <a href="https://en.wikipedia.org/wiki/Teletype_Corporation">Wikipedia page for the Teletype Corporation</a>. The Model 26 was in extensive use during World War II by U.S. forces, and after the war, many were sold as surplus. HAM operators found that if they connected the landline output to a transmitter’s variable frequency oscillator using an inductor, diode and a variable capacitor, they could use the binary code to generate a frequency shift keyed (FSK) binary code of two tones, which could be transmitted as audio over a SSB transmission. A SSB receiver on the same frequency would demodulate the signal through a few discrete components and be feed to another Model 26 teletype on the other end, which would print the message onto paper. This method of modulation became know as Radio Teletype (RTTY).</p>
+
+        </div>
+    </div>
+</div>
+
+
+                        
+                    </div>
+                    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+    <small>Copyright &copy;Judson Hartley 2024 | All rights reserved</small>
+</footer>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
